@@ -1,0 +1,9 @@
+<main class="container mt-5  rounded white">
+  <button (click)="addForm()" id="add-main-label-btn" type="button" mdbBtn gradient="blue" rounded="true" class="mt-2 fixed-top">Add label</button>
+  
+  <div *ngFor="let form of formsTab()" class="py-1 shadow">
+    <app-form ></app-form>
+  </div>
+
+
+</main>

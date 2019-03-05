@@ -11,8 +11,5 @@ export class MainContentComponent implements OnInit {
 
   ngOnInit() {
   }
-  createForm(){
-    alert(1)
-  }
 
 }

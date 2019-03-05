@@ -1,0 +1,50 @@
+<div [ngSwitch]="typeOfForm">
+  <!--Text type form-->
+  <form *ngSwitchDefault>
+    <mdb-card>
+
+      <mdb-card-header class="info-color white-text text-center py-4">
+        <h5>
+          <strong>Form #{{idForm}}</strong>
+        </h5>
+      </mdb-card-header>
+
+      <!--Card content-->
+      <mdb-card-body class="px-lg-5">
+
+        <!-- Form -->
+        <div class="controls">
+          <select id="country" name="country" class="form-control">
+            <option value="" selected="selected">(please select a type)</option>
+            <option value="text">TEXT</option>
+            <option value="number">NUMBER</option>
+            <option value="boolean">Yes/no (ratio)</option>
+          </select>
+        </div>
+        <!-- Form -->
+
+      </mdb-card-body>
+
+    </mdb-card>
+
+  </form>
+
+  <!--Text type form-->
+  <form *ngSwitchCase="'boolean'">
+
+  </form>
+  <!--Text type form-->
+
+  <!--Number type form-->
+  <form *ngSwitchCase="'number'">
+
+  </form>
+  <!--Number type form-->
+
+  <!--boolean type form-->
+  <form *ngSwitchCase="'boolean'">
+
+  </form>
+  <!--boolean type form-->
+
+</div>
