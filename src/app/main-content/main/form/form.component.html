@@ -1,5 +1,5 @@
-<div [ngSwitch]="typeOfForm">
-  <!--Text type form-->
+<div class="my-2 shadow" [ngSwitch]="typeOfForm">
+  <!--default-->
   <form *ngSwitchDefault>
     <mdb-card>
 
@@ -14,7 +14,7 @@
 
         <!-- Form -->
         <div class="controls">
-          <select id="country" name="country" class="form-control">
+          <select id="chose-type" (input)="inputValue($event)" name="chose-type" class="form-control">
             <option value="" selected="selected">(please select a type)</option>
             <option value="text">TEXT</option>
             <option value="number">NUMBER</option>
@@ -28,9 +28,15 @@
     </mdb-card>
 
   </form>
+  <button class="btn btn-succes red"> ADD Label</button>
+
+  <div class="container">
+    
+  </div>
+  <!--default-->
 
   <!--Text type form-->
-  <form *ngSwitchCase="'boolean'">
+  <form *ngSwitchCase="'text'">
 
   </form>
   <!--Text type form-->
